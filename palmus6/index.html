@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palmus - Fashion Redefined</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            line-height: 1.8;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #0d0d0d;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f0a500;
+        }
+
+        .section {
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        #home {
+             background: url('background3.png') no-repeat center center/cover;
+            color: white;
+            padding: 5rem 2rem;
+            text-shadow: 3px 3px 3px #000000;
+        }
+
+        #home h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+
+        #about, #vision-mission, #offerings, #contact {
+            background: #f4f4f4;
+            margin: 1rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+
+        footer {
+            background: #0d0d0d;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            max-width: 600px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            background-color: white;
+            height: 4px;
+            margin: 3px 0;
+            width: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            #home h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('nav ul');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Palmus</h1>
+        <nav>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#vision-mission">Vision & Mission</a></li>
+                <li><a href="#offerings">Offerings</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <h2>Welcome to Palmus</h2>
+        <p>Elevate your wardrobe with elegant and sophesticated pieces from Palmus. Step into luxury with timeless designs and impeccable quality.</p>
+        <img src="11.jpg" alt="Fashion Collection" class="image-placeholder">
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>Palmus is a premium fashion brand dedicated to delivering elegance through modern design and meticulous craftsmanship. We take pride in offering collections that blend contemporary trends with timeless sophistication.</p>
+        <p>Our journey began with a vision to redefine luxury. Each creation at Palmus represents a story of artistry, precision, and a commitment to excellence. We believe fashion is not just about clothing but an expression of individuality and confidence.</p>
+        <p>From elegant formal wear to exquisite casual styles, Palmus caters to discerning clients seeking exclusivity and quality.</p>
+        <img src="clothes.jpeg" alt="About Palmus" class="image-placeholder">
+    </section>
+
+    <section id="vision-mission" class="section">
+        <h2>Vision & Mission</h2>
+        <p><strong>Vision:</strong> To inspire confidence and elegance through premium fashion, establishing Palmus as a global icon of style and sophistication.</p>
+        <p>Our vision drives us to push the boundaries of fashion innovation while remaining committed to sustainability and craftsmanship that stands the test of time.</p>
+        <p><strong>Mission:</strong> To create extraordinary fashion experiences through meticulous design, ethical production, and exceptional quality. We aim to celebrate individuality by offering collections that empower people to express their unique sense of style.</p>
+        <p>Our mission is also rooted in promoting sustainable practices, ensuring that fashion’s future is as bright and beautiful as its present.</p>
+        <img src="12.jpeg" alt="Our Mission" class="image-placeholder">
+    </section>
+
+    <section id="offerings" class="section">
+        <h2>Our Offerings</h2>
+        <p>Palmus provides a wide range of fashion products, each crafted with attention to detail and a commitment to quality.</p>
+        <p><strong>Luxury Formal Wear:</strong> Perfect for special occasions and professional settings, our formal wear exudes class and elegance.</p>
+        <img src="3.jpeg" alt="Luxury Formal Wear" class="image-placeholder">
+        <p><strong>Casual Chic:</strong> Explore everyday fashion that combines comfort and style for a sophisticated look.</p>
+        <img src="1.jpeg" alt="Casual Chic" class="image-placeholder">
+        <p><strong>Accessories:</strong> Complement your wardrobe with premium accessories designed to add the perfect finishing touch.</p>
+        <img src="purse.jpeg" alt="Accessories" class="image-placeholder">
+        <p>Our offerings are tailored to bring out the best in you, aligning fashion with your unique persona.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email: palmus.apparel@gmail.com <br>Phone: +91-9205278714</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Palmus. All rights reserved.</p>
+    </footer>
+</body>
+</html>
